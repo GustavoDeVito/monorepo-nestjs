@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "lib/date": [
+        "libs/date/src"
+      ],
+      "lib/date/*": [
+        "libs/date/src/*"
+      ],
+      "@lib/date": [
+        "libs/date/src"
+      ],
+      "@lib/date/*": [
+        "libs/date/src/*"
+      ],
+      "@database/database": [
+        "libs/database/src"
+      ],
+      "@database/database/*": [
+        "libs/database/src/*"
+      ],
+      "@validation/dto": [
+        "libs/dto/src"
+      ],
+      "@validation/dto/*": [
+        "libs/dto/src/*"
+      ]
+    }
+  }
+}
