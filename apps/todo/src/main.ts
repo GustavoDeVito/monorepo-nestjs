@@ -1,10 +1,10 @@
 import { NestFactory } from '@nestjs/core';
-import { UserModule } from './user.module';
+import { TodoModule } from './todo.module';
 import helmet from 'helmet';
 import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
-  const app = await NestFactory.create(UserModule);
+  const app = await NestFactory.create(TodoModule);
 
   app.enableCors();
   app.use(helmet());
