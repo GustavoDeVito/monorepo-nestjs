@@ -19,15 +19,6 @@
         "tsConfigPath": "apps/user/tsconfig.app.json"
       }
     },
-    "todo": {
-      "type": "application",
-      "root": "apps/todo",
-      "entryFile": "main",
-      "sourceRoot": "apps/todo/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/todo/tsconfig.app.json"
-      }
-    },
     "date": {
       "type": "library",
       "root": "libs/date",
@@ -37,15 +28,6 @@
         "tsConfigPath": "libs/date/tsconfig.lib.json"
       }
     },
-    "database": {
-      "type": "library",
-      "root": "libs/database",
-      "entryFile": "index",
-      "sourceRoot": "libs/database/src",
-      "compilerOptions": {
-        "tsConfigPath": "libs/database/tsconfig.lib.json"
-      }
-    },
     "dto": {
       "type": "library",
       "root": "libs/dto",
@@ -53,6 +35,15 @@
       "sourceRoot": "libs/dto/src",
       "compilerOptions": {
         "tsConfigPath": "libs/dto/tsconfig.lib.json"
+      }
+    },
+    "database": {
+      "type": "library",
+      "root": "libs/database",
+      "entryFile": "index",
+      "sourceRoot": "libs/database/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database/tsconfig.lib.json"
       }
     }
   }

@@ -1,2 +1,25 @@
 ### FindAll
 GET http://localhost:3000 HTTP/1.1
+
+### FindOne
+GET http://localhost:3000/64888b43c5adb5eb550c10e1 HTTP/1.1
+
+### Create
+POST http://localhost:3000 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Lorem",
+    "lastName": "End"
+}
+
+### Update
+PATCH http://localhost:3000/64888b43c5adb5eb550c10e1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Lorem 15"
+}
+
+### Delete
+DELETE http://localhost:3000/64888b43c5adb5eb550c10e1 HTTP/1.1

@@ -1,40 +1,40 @@
-import { DatabaseService } from '@database/database';
+import { UserService } from '@database/database/services/user.service';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateUserDto, UpdateUserDto } from '@validation/dto';
 
 @Injectable()
 export class AppService {
-  constructor(private readonly databaseService: DatabaseService) {}
+  constructor(private readonly userService: UserService) {}
 
   findAll() {
-    return this.databaseService.findAllUsers();
+    return this.userService.findAll();
   }
 
   findOne(id: string) {
-    return this.databaseService.findOneUser(id);
+    return this.userService.findOne(id);
   }
 
   create(createUserDto: CreateUserDto) {
-    return this.databaseService.createUser(createUserDto);
+    return this.userService.create(createUserDto);
   }
 
   async update(id: string, updateUserDto: UpdateUserDto) {
-    const user = await this.databaseService.findOneUser(id);
+    const user = await this.userService.findOne(id);
 
     if (!user) {
       throw new NotFoundException();
     }
 
-    return this.databaseService.updateUser(id, updateUserDto);
+    return this.userService.update(id, updateUserDto);
   }
 
   async delete(id: string) {
-    const user = await this.databaseService.findOneUser(id);
+    const user = await this.userService.findOne(id);
 
     if (!user) {
       throw new NotFoundException();
     }
 
-    return this.databaseService.deleteUser(id);
+    return this.userService.delete(id);
   }
 }

@@ -1,17 +1,13 @@
 import { Module } from '@nestjs/common';
-import { DatabaseService } from './database.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { MongooseModule } from '@nestjs/mongoose';
+import { User, UserSchema } from './schemas/user.schema';
+import { UserService } from './services/user.service';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database: 'monorepoDB',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true,
-    }),
+    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
   ],
-  providers: [DatabaseService],
-  exports: [DatabaseService],
+  providers: [UserService],
+  exports: [UserService],
 })
 export class DatabaseModule {}
