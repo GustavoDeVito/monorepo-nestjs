@@ -5,7 +5,7 @@ import { Model } from 'mongoose';
 import { CreateUserDto, UpdateUserDto } from '@validation/dto';
 
 @Injectable()
-export class UserService {
+export class DatabaseUserService {
   constructor(@InjectModel(User.name) private userModel: Model<User>) {}
 
   findAll() {
